@@ -1,0 +1,620 @@
+===========================================================================
+                           DJASSIST GRABBER
+             Guia de instalacion y uso (sin cosas tecnicas)
+===========================================================================
+
+Que es esto?
+------------
+DJAssist Grabber te ayuda a bajar los temas de una playlist desde Soulseek
+(una red gigante donde la gente comparte musica) usando el programa
+Nicotine+.
+
+Le pasas una playlist (un archivo o una captura de pantalla), el programa
+busca cada tema y te muestra las opciones que encontro. TU eliges cual
+bajar. Nunca descarga nada solo, sin que tu lo apruebes.
+
+Todo se maneja desde una pagina en tu navegador (Chrome, Safari, Edge...),
+pero esa pagina funciona en tu propio computador: no es un sitio de
+internet y nadie mas la ve.
+
+  +---------------------------------------------------------------------+
+  |  IMPORTANTE: Nicotine+ tiene que estar ABIERTO todo el tiempo       |
+  |  mientras usas DJAssist Grabber.                                    |
+  |                                                                     |
+  |  La pagina funciona "adentro" de Nicotine+: si lo cierras, la       |
+  |  pagina deja de cargar, no se puede buscar y las descargas se       |
+  |  cortan. Puedes minimizarlo y dejarlo en segundo plano, pero no     |
+  |  lo cierres. (Si lo cierras sin querer, tus colas no se pierden:    |
+  |  abrelo de nuevo y recarga la pagina.)                              |
+  +---------------------------------------------------------------------+
+
+
+INDICE
+------
+  PARTE 1 - INSTALACION
+    1. Lo que necesitas
+    2. Instalar en Windows
+    3. Instalar en Mac
+    4. Primera vez en Nicotine+
+    5. Activar DJAssist Grabber
+
+  PARTE 2 - COMO SE USA
+    6. Abrir la pagina
+    7. Crear una cola desde una playlist
+    8. Crear una cola desde una captura de pantalla (OCR)
+    9. Buscar los temas
+   10. Elegir y bajar cada tema
+   11. Si un tema no aparece
+   12. Ordenar tus colas (renombrar, borrar)
+   13. Donde quedan las cosas
+
+  PARTE 3 - AYUDA
+   14. Problemas comunes y como arreglarlos
+   15. Actualizar a una version nueva
+   16. Desinstalar
+   17. Buena onda en Soulseek (importante)
+
+
+===========================================================================
+PARTE 1 - INSTALACION
+===========================================================================
+
+1. LO QUE NECESITAS
+-------------------
+  - Un computador con Windows 10/11 o Mac.
+  - Internet.
+  - La carpeta de DJAssist Grabber (te la pasa quien te recomendo esto,
+    normalmente como un archivo .zip).
+  - Unos 15 minutos la primera vez.
+
+No necesitas saber programar ni usar la "terminal". Todo es con doble
+click.
+
+Durante la instalacion se van a instalar (si no los tienes):
+  - Python: un programa que DJAssist Grabber necesita para funcionar.
+    No lo vas a usar directamente, solo tiene que estar instalado.
+  - Nicotine+: el programa para conectarte a Soulseek.
+
+
+2. INSTALAR EN WINDOWS
+----------------------
+Paso 1: Descomprimir
+  Haz click derecho sobre el .zip -> "Extraer todo..." -> "Extraer".
+  Te queda una carpeta normal. Dejala en un lugar donde no la vayas a
+  borrar sin querer (por ejemplo, en Documentos).
+
+  IMPORTANTE: no hagas doble click adentro del .zip sin extraerlo antes.
+  Tiene que ser la carpeta ya extraida.
+
+Paso 2: Doble click en "Instalar.bat"
+  Esta dentro de la carpeta. Se abre una ventana negra con texto: es
+  normal, es el instalador.
+
+  Si aparece un aviso azul que dice "Windows protegio su PC":
+    -> Click en "Mas informacion"
+    -> Click en "Ejecutar de todas formas"
+  (Windows avisa eso con cualquier archivo bajado de internet.)
+
+Paso 3: Si te dice "No encontre Python instalado en tu compu"
+  Se abre sola la pagina de Python en tu navegador.
+    a) Click en el boton amarillo "Download Python 3..."
+    b) Abre el archivo que se bajo.
+    c) MUY IMPORTANTE: en la primera pantalla, abajo, marca la casilla
+       "Add python.exe to PATH".
+    d) Click en "Install Now" y espera a que termine.
+    e) Cierra la ventana negra y vuelve a hacer doble click en
+       "Instalar.bat".
+
+Paso 4: Si no tienes Nicotine+
+  El instalador lo baja solo y abre su instalador. Dale "Siguiente" a
+  todo como cualquier programa. Cuando termine, vuelve a la ventana
+  negra y aprieta Enter.
+
+Paso 5: Listo
+  Cuando la ventana dice "Listo. Para terminar:", ya esta instalado.
+  Aprieta cualquier tecla para cerrarla y sigue con la seccion 4.
+
+
+3. INSTALAR EN MAC
+------------------
+Paso 1: Descomprimir
+  Doble click en el .zip. Te queda una carpeta al lado. Muevela a un
+  lugar donde no la vayas a borrar (por ejemplo, Documentos).
+
+Paso 2: Abrir "Instalar.command"
+  La primera vez, NO hagas doble click. Haz esto:
+    -> Click derecho (o Control + click) sobre "Instalar.command"
+    -> "Abrir"
+    -> En el aviso, click otra vez en "Abrir"
+  (El Mac bloquea archivos bajados de internet si los abres con doble
+  click la primera vez.)
+
+  Se abre una ventana de Terminal con texto: es normal, es el
+  instalador.
+
+Paso 3: Si te dice "No encontre Python 3 instalado en tu Mac"
+  Se abre la pagina de Python. Baja la version para macOS (boton
+  amarillo), instalala como cualquier programa, y vuelve a abrir
+  "Instalar.command".
+
+Paso 4: Si no tienes Nicotine+
+  El instalador lo baja y lo abre. Arrastra Nicotine+ a la carpeta
+  Aplicaciones como cualquier app. Vuelve a la Terminal y aprieta Enter.
+
+  Si el Mac dice que no puede abrir Nicotine+ porque "no se puede
+  verificar el desarrollador": ve a Aplicaciones, click derecho en
+  Nicotine+ -> "Abrir" -> "Abrir".
+
+Paso 5: Listo
+  Cuando dice "Listo. Para terminar:", aprieta Enter para cerrar y
+  sigue con la seccion 4.
+
+
+4. PRIMERA VEZ EN NICOTINE+
+---------------------------
+(Si ya usabas Nicotine+, salta a la seccion 5.)
+
+Abre Nicotine+. La primera vez te hace unas preguntas:
+
+  Usuario y contrasena:
+    Si no tienes cuenta de Soulseek, INVENTA un nombre de usuario y una
+    contrasena. La cuenta se crea sola la primera vez que te conectas.
+    Anotalos en algun lado: si los pierdes, no hay forma de recuperarlos.
+    Si te dice que el usuario ya existe, prueba con otro nombre.
+
+  Carpeta de descargas:
+    Es donde van a quedar los temas que bajes. Te recomendamos elegir
+    una facil de encontrar, por ejemplo:
+      Windows: Musica\DJAssist Grabber\Descargas
+      Mac:     Musica/DJAssist Grabber/Descargas
+    (Si no la eliges, Nicotine+ usa una carpeta escondida y despues te
+    va a costar encontrar tus temas. Ver seccion 13 para cambiarla.)
+
+  Carpetas compartidas:
+    Elige al menos una carpeta con musica para compartir. Lee la seccion
+    17 para entender por que es importante.
+
+Cuando termines, arriba deberia decir que estas conectado.
+
+
+5. ACTIVAR DJASSIST GRABBER
+---------------------------
+Esto se hace UNA sola vez.
+
+  1. En Nicotine+, abre el menu (el boton con tres rayitas, arriba a la
+     derecha) -> "Preferencias" (o "Preferences" si esta en ingles).
+  2. En la lista de la izquierda, entra a "Plugins".
+  3. Asegurate de que "Activar plugins" ("Enable plugins") este prendido.
+  4. Busca "DJAssist Grabber" en la lista y marca su casilla.
+  5. Cierra las preferencias.
+
+Listo. Desde ahora, cada vez que abras Nicotine+, DJAssist Grabber se
+enciende solo.
+
+
+===========================================================================
+PARTE 2 - COMO SE USA
+===========================================================================
+
+6. ABRIR LA PAGINA
+------------------
+  1. Abre Nicotine+ y espera a que se conecte.
+  2. Abre tu navegador y escribe esto en la barra de direcciones:
+
+         http://127.0.0.1:8765
+
+  3. Te recomendamos guardarla en favoritos.
+
+Si se te olvida la direccion: en cualquier chat de Nicotine+ escribe
+/dj y te la muestra.
+
+OJO: la pagina solo funciona mientras Nicotine+ esta abierto. Si cierras
+Nicotine+, la pagina deja de cargar (no se pierde nada, solo vuelve a
+abrirlo).
+
+La pagina tiene dos botones arriba:
+  - "Mis colas": todas tus playlists cargadas.
+  - "+ Nueva playlist": para cargar una nueva.
+
+Una "cola" es simplemente una playlist cargada en DJAssist Grabber, con
+el estado de cada tema (pendiente, encontrado, bajado, etc.).
+
+
+7. CREAR UNA COLA DESDE UNA PLAYLIST
+------------------------------------
+  1. Click en "+ Nueva playlist".
+  2. Arrastra tu archivo al recuadro punteado (o usa el boton para
+     elegirlo).
+
+     Sirven estos tipos de archivo:
+       - .txt  (lista de texto, o exportada desde Rekordbox)
+       - .csv  (exportada desde Rekordbox, Excel, etc.)
+       - .m3u / .m3u8  (playlists de reproductores)
+       - .xml  (la coleccion exportada de Rekordbox)
+       - Una imagen (captura de pantalla) -> ver seccion 8
+
+     Si subes un .xml de Rekordbox con varias playlists, te pregunta
+     cual quieres usar. Elige una y click en "Usar esta".
+
+  3. Aparece un cuadro con el texto de la playlist, un tema por linea.
+     REVISALO antes de seguir. Cada linea tiene que quedar asi:
+
+         Artista - Nombre del tema
+
+     Por ejemplo:
+         Kideko - The Message
+         Laurence Guy - U GO
+
+     Puedes escribir, borrar o corregir lo que quieras. Algunos trucos:
+       - Si una linea empieza con #, se ignora (sirve para notas).
+       - Los numeros al principio ("01. ", "12) ") se sacan solos.
+       - "Artista - Tema - Sello" tambien sirve: el sello se ignora.
+       - Mientras mejor escritos esten artista y tema, mejores
+         resultados vas a tener.
+
+     Abajo te dice cuantas lineas (temas) hay.
+
+  4. Arriba del cuadro esta "Nombre de la cola". Ponle un nombre que
+     entiendas despues (ej. "Set sabado", "Favoritos marzo"). Si no lo
+     cambias, usa el nombre del archivo.
+
+  5. Click en "Crear cola". Te lleva directo a la cola.
+
+
+8. CREAR UNA COLA DESDE UNA CAPTURA DE PANTALLA (OCR)
+-----------------------------------------------------
+Puedes subir una foto o captura de pantalla de una playlist (por ejemplo,
+de Rekordbox, Beatport o Instagram) y el programa lee el texto de la
+imagen. A eso se le llama OCR.
+
+La primera vez:
+  Al subir una imagen, te va a aparecer un aviso diciendo que hay que
+  instalar el lector de imagenes. Click en "Instalar OCR".
+    - Es una descarga grande (1 a 2 GB). Usa buena conexion.
+    - Puede tardar varios minutos. La pagina te va mostrando el avance.
+    - No cierres Nicotine+ mientras se instala.
+    - Se instala UNA sola vez. Cuando termina, sigue sola con tu imagen.
+
+Despues:
+  1. Sube la imagen igual que un archivo (seccion 7).
+  2. Espera unos segundos (entre 5 y 15) mientras lee la imagen.
+  3. Revisa MUY bien el texto: el OCR se equivoca seguido. Fijate en:
+       - Letras cambiadas (una "l" por una "I", un "0" por una "O").
+       - Acentos o simbolos raros (el lector funciona mejor en ingles).
+       - Lineas con " / " en el medio: significa que no supo separar
+         artista y tema. Arreglalas a mano como "Artista - Tema".
+       - Lineas que no son temas (botones, titulos): borralas.
+  4. Ponle un buen nombre a la cola (si no, queda algo como
+     "Screenshot 2026-09-10 at 7.13.32 PM") y click en "Crear cola".
+
+Consejos para que lea mejor:
+  - Captura solo la lista, sin tanto alrededor.
+  - Que se vea nitida y grande (haz zoom antes de capturar).
+  - Si la playlist es larga, sube varias capturas por separado.
+
+
+9. BUSCAR LOS TEMAS
+-------------------
+Dentro de una cola ves una tabla con todos los temas y su estado.
+
+Antes de buscar: marca los temas que ya tienes (si usas Rekordbox)
+  DJAssist Grabber puede revisar tu coleccion de Rekordbox y marcar como
+  "Ya lo tienes" los temas que ya tienes, para no bajarlos de nuevo.
+  Se configura UNA sola vez:
+    1. En Rekordbox: menu "Archivo" -> "Exportar coleccion en formato xml"
+       (en ingles: "File" -> "Export Collection in xml format"; el nombre
+       puede variar un poco segun la version). Guardalo en un lugar facil,
+       por ejemplo:  Musica\DJAssist Grabber\rekordbox.xml
+    2. En Nicotine+: menu -> Preferencias -> "Plugins" -> click en
+       "DJAssist Grabber" -> boton "Settings" -> en "Coleccion de Rekordbox
+       exportada en XML" elige ese archivo.
+  En "Mis colas" vas a ver cuantos temas tiene tu coleccion y cuando la
+  exportaste.
+
+  Cuando agregues musica a Rekordbox, vuelve a exportar la coleccion al
+  MISMO archivo (reemplazandolo). DJAssist Grabber lo nota solo.
+
+  Solo cuenta si tienes la MISMA version. Si tienes otra (por ejemplo
+  pediste el Extended y tienes el Original), el tema se busca igual y
+  aparece la nota "Tienes otra version en Rekordbox".
+
+Para buscar todo de una:
+  Click en "Buscar todos los pendientes".
+  El programa busca varios temas al mismo tiempo. Cada busqueda tarda
+  unos 12 segundos o mas, asi que una playlist de 30 temas puede tardar
+  algunos minutos. Puedes dejar la pagina abierta y hacer otra cosa.
+
+  - Cuando termina, te avisa: suena un "ding", aparece un aviso en la
+    pagina y (si le das permiso) una notificacion en tu computador, aunque
+    estes en otra pestana o en otro programa. Click en el aviso para ir
+    directo a esa cola.
+    La primera vez que aprietas "Buscar todos", el navegador te pregunta
+    si quieres permitir notificaciones: dale "Permitir".
+  - "Detener busqueda": frena las que faltan (las que ya estaban
+    buscando terminan igual). Si la detienes tu, no suena el aviso.
+  - "En paralelo": cuantos temas busca al mismo tiempo (viene en 4).
+    Si ves que muchos temas salen "Sin resultados" de repente, bajalo
+    a 1 o 2 (ver seccion 14).
+
+Para buscar un solo tema:
+  Click en "Buscar" en la fila de ese tema.
+
+Que significa cada estado:
+  Pendiente               Todavia no se busca.
+  Buscando...             Buscando en este momento.
+  Revisar candidatos      Encontro opciones. Te toca elegir (seccion 10).
+  Descargando             Lo elegiste y se esta bajando.
+  Listo                   Ya se bajo.
+  Sin resultados          No encontro nada que sirviera (seccion 11).
+  Manual (DJ tool / edit) Parece un loop, sample, acapella o edit
+                          personal, que casi nunca estan en Soulseek.
+                          "Buscar todos" se lo salta, pero puedes
+                          apretar "Buscar" en esa fila igual.
+  Ya lo tienes            Ya esta en tu coleccion de Rekordbox (misma
+                          version). "Buscar todos" se lo salta. Si igual
+                          lo quieres bajar, aprieta "Buscar igual".
+
+
+10. ELEGIR Y BAJAR CADA TEMA
+----------------------------
+  1. En un tema con "Revisar candidatos", click en "Ver opciones".
+  2. Aparecen hasta 5 archivos encontrados, el mejor arriba. Cada uno
+     muestra algo asi (en la pagina van separados por puntitos):
+
+       Kideko - The Message (Extended Mix).mp3
+       MP3 - 320kbps - 12.4 MB - usuario123 - slot libre - score 142.5
+
+     Que significa:
+       - Nombre del archivo: revisa que sea el tema y la version que
+         quieres (Original, Extended, Remix de tal persona...).
+       - MP3 / FLAC / AIFF / WAV: el formato. Se prefiere MP3 a 320kbps.
+         FLAC, AIFF y WAV son de maxima calidad pero pesan mucho mas.
+       - 320kbps: la calidad del MP3. 320 es lo maximo. Los de menos de
+         256 ni siquiera aparecen.
+       - MB: lo que pesa. Un tema normal en MP3 320 pesa entre 8 y 20 MB.
+         Si pesa muy poco (1-3 MB), desconfia: puede ser un pedazo.
+       - usuario123: la persona que lo comparte.
+       - "slot libre": esa persona puede mandartelo altiro. Si dice
+         "en cola (5)", hay gente esperando antes que tu y va a tardar.
+       - score: un puntaje para ordenar las opciones. Mas alto = mejor
+         coincidencia y mas rapido de bajar. No hace falta entenderlo en
+         detalle: el de arriba suele ser la mejor opcion.
+
+  3. Click en "Bajar este" en el que elijas.
+  4. El tema pasa a "Descargando" con una barra de avance. Cuando llega
+     al 100% pasa a "Listo" y muestra el nombre del archivo bajado.
+
+Bajar varios de una ("match perfecto"):
+  Cuando ya buscaste la cola, puede aparecer arriba un boton como
+  "Bajar 12 con match perfecto". Manda a descargar de una todos los temas
+  donde hay un candidato que calza perfecto:
+    - trae el artista y el nombre completos del tema,
+    - es la MISMA version que pediste (si pediste el Original, no te baja
+      un Remix, un Dub ni un Radio Edit),
+    - y esta en el formato preferido (MP3 a 320kbps).
+  Te pide confirmar antes. Los temas que no calzan perfecto quedan en
+  "Revisar candidatos" para que los elijas a mano como siempre.
+  Dentro de "Ver opciones", los candidatos perfectos tienen la etiqueta
+  "match perfecto".
+
+  OJO: "perfecto" es segun el nombre del archivo. Igual conviene escuchar
+  los temas antes de tocarlos en un set.
+
+Si una descarga no avanza:
+  A veces la persona se desconecta o tiene una fila larga. En Nicotine+,
+  en la pestana "Descargas", puedes ver que pasa. Si se queda pegada
+  mucho rato, en la pagina elige otro candidato de ese tema (con "slot
+  libre"). Mensajes como "connection timeout" o colas largas son normales
+  en Soulseek: no es que algo este roto.
+
+Si bajaste el tema equivocado:
+  En los temas "Listo" hay un boton "Buscar otra vez": lo vuelve a
+  pendiente para que busques y elijas de nuevo. (El archivo que ya bajaste
+  no se borra: si no lo quieres, borralo tu de la carpeta de descargas.)
+
+
+11. SI UN TEMA NO APARECE
+-------------------------
+Cuando un tema sale "Sin resultados":
+
+  1. Revisa que artista y nombre esten bien escritos. Si habia un error,
+     lo mas facil es crear la cola de nuevo con el texto corregido.
+  2. Click en "Ver opciones" -> "Buscar en Bandcamp / SoundCloud".
+     - Aparecen botones para abrir la busqueda en Bandcamp y en
+       SoundCloud en tu navegador.
+     - A veces aparecen resultados directos de Bandcamp: click para ir
+       a la pagina del tema.
+     Muchos temas que no estan en Soulseek se pueden comprar en Bandcamp
+     (apoyas directo al artista) o son descarga gratis en SoundCloud.
+  3. Intenta mas tarde: la gente que comparte musica se conecta y
+     desconecta todo el tiempo. Un tema que hoy no aparece, manana puede
+     estar. Usa el boton "Buscar" en esa fila.
+
+Para buscar todos los que faltan en otro lado:
+  Arriba de la cola aparece el boton "Copiar los que faltan (6)". Copia
+  al portapapeles los temas "Sin resultados" y "Manual", uno por linea:
+
+      Kideko, Roland Clark - Have a Good Time
+      Laurence Guy - U GO
+
+  Pegalo donde quieras (Bloc de notas, un chat, tu lista para Bandcamp)
+  con Ctrl + V (Windows) o Cmd + V (Mac).
+
+
+12. ORDENAR TUS COLAS (RENOMBRAR, BORRAR)
+-----------------------------------------
+Renombrar:
+  Entra a la cola -> click en "Renombrar" (al lado del titulo) -> escribe
+  el nombre nuevo -> Enter o "Guardar". (Escape o "Cancelar" para salir
+  sin cambiar nada.)
+
+Borrar:
+  - Desde "Mis colas": la "x" en la esquina de la tarjeta.
+  - Desde adentro de una cola: "Borrar esta cola".
+  Te pide confirmar. Borrar una cola NO borra los temas que ya bajaste,
+  solo la lista de la pagina. Pero no se puede deshacer.
+
+Tus colas se guardan solas: puedes cerrar el navegador, apagar el
+computador, y al volver todo sigue donde lo dejaste.
+
+
+13. DONDE QUEDAN LAS COSAS
+--------------------------
+Los temas que bajas:
+  Cada playlist se guarda en SU PROPIA carpeta, con el nombre de la cola,
+  adentro de la carpeta de descargas de Nicotine+ (la que elegiste en la
+  seccion 4). Por ejemplo:
+
+      Descargas\Set sabado\Kideko - The Message.mp3
+      Descargas\Favoritos marzo\Laurence Guy - U GO.mp3
+
+  Asi, cuando terminas, arrastras la carpeta completa a Rekordbox.
+
+  La carpeta toma el nombre que tenia la cola cuando bajaste el primer
+  tema. Si despues renombras la cola, la carpeta NO cambia (asi los temas
+  no quedan repartidos en dos carpetas).
+
+  Si prefieres que las carpetas de las playlists se creen en otro lado:
+    Nicotine+ -> menu -> Preferencias -> "Plugins" -> click en
+    "DJAssist Grabber" -> boton "Settings" (Ajustes) -> en "Carpeta donde
+    se crea una carpeta por cada playlist" elige la carpeta que quieras.
+    Si lo dejas vacio, se usa la carpeta de descargas de Nicotine+.
+
+  Si no te acuerdas cual es, o quieres cambiarla:
+    Nicotine+ -> menu -> Preferencias -> "Descargas" ("Downloads") ->
+    "Carpeta de descargas" ("Download folder").
+
+  Si nunca la elegiste, la carpeta por defecto esta escondida en:
+    Windows: C:\Users\TU_USUARIO\AppData\Roaming\nicotine\downloads
+             (para llegar: tecla Windows + R, escribe
+              %APPDATA%\nicotine\downloads  y Enter)
+    Mac:     tu carpeta de usuario / .local / share / nicotine / downloads
+             (en Finder: Cmd + Shift + G y pega
+              ~/.local/share/nicotine/downloads )
+
+Tus colas (las listas de la pagina):
+  Windows: Musica\DJAssist Grabber\Colas
+  Mac:     Musica/DJAssist Grabber/Colas
+
+  Son archivos .json. NO los abras, edites ni borres a mano: se puede
+  romper o perder la cola. Para todo eso usa la pagina. Si quieres
+  respaldar tus colas, copia la carpeta completa a otro lado.
+
+Este mismo LEEME:
+  Tambien queda una copia en Musica/DJAssist Grabber, para que lo tengas
+  a mano.
+
+
+===========================================================================
+PARTE 3 - AYUDA
+===========================================================================
+
+14. PROBLEMAS COMUNES Y COMO ARREGLARLOS
+----------------------------------------
+"La pagina http://127.0.0.1:8765 no carga"
+  - Esta abierto Nicotine+? Tiene que estarlo.
+  - Esta activado el plugin? Revisa la seccion 5.
+  - Prueba desactivar y volver a activar DJAssist Grabber en
+    Preferencias -> Plugins, y recarga la pagina.
+  - Si nada funciona, cierra Nicotine+ por completo y abrelo de nuevo.
+
+"Todos los temas salen Sin resultados"
+  - Nicotine+ esta conectado? Si no hay sesion iniciada, no puede buscar.
+  - Si antes funcionaba y de repente muchos seguidos salen sin
+    resultados, puede que Soulseek este ignorando tus busquedas por hacer
+    muchas muy rapido. Baja "En paralelo" a 1 o 2, espera unos minutos, y
+    vuelve a buscar esos temas.
+
+"Instalar.bat abre y se cierra altiro" (Windows)
+  - Asegurate de haber extraido el .zip (seccion 2, paso 1).
+  - Si instalaste Python recien, reinicia el computador y prueba de nuevo.
+  - Si instalaste Python sin marcar "Add python.exe to PATH", desinstalalo
+    y vuelve a instalarlo marcando esa casilla.
+
+"No aparece DJAssist Grabber en la lista de Plugins"
+  - Vuelve a correr el instalador (seccion 2 o 3).
+  - Cierra Nicotine+ por completo y abrelo de nuevo.
+
+"El OCR dio error al instalar"
+  - Revisa tu conexion y que tengas al menos 3 GB libres en el disco.
+  - Vuelve a subir la imagen y aprieta "Instalar OCR" otra vez.
+  - Si sigue fallando, sacale una foto al mensaje de error y mandasela a
+    quien te paso el programa.
+
+"El OCR lee cualquier cosa"
+  - Revisa los consejos de la seccion 8 (captura nitida, solo la lista).
+  - Siempre puedes escribir o pegar la lista a mano en un .txt.
+
+"La descarga se queda pegada en 0%"
+  - Normal en Soulseek. Elige otro candidato con "slot libre" (seccion 10).
+
+"Algo raro que no esta aca"
+  - Cierra Nicotine+, abrelo de nuevo, y recarga la pagina.
+  - Si sigue, anota que estabas haciendo, sacale foto a cualquier mensaje
+    de error y mandaselo a quien te paso el programa.
+
+
+15. ACTUALIZAR A UNA VERSION NUEVA
+----------------------------------
+Como me entero de que hay una version nueva?
+  La pagina revisa sola una vez al dia. Si hay una version nueva, aparece
+  una franja verde arriba que dice "Hay una version nueva" con un boton
+  "Descargar". Tambien puedes revisar cuando quieras con el boton
+  "Buscar actualizaciones" (arriba a la derecha).
+  Necesita internet. Nunca instala nada sola: solo te avisa.
+
+Que version tengo?
+  En la pagina, arriba a la izquierda, al lado de "DJAssist Grabber" dice
+  la version (por ejemplo "v1.0"). El .zip trae la version en el nombre
+  (por ejemplo "DJAssist-Grabber-v1.1.zip"). Si el numero del zip es mas
+  alto que el de tu pagina, es una version nueva.
+
+Cuando haya una version nueva:
+  1. Baja el .zip nuevo (boton "Descargar" de la franja verde, o el que te
+     pasen) y descomprimelo (puedes borrar la carpeta vieja).
+  2. Doble click en "Instalar.bat" (Windows) o "Instalar.command" (Mac).
+  3. En Nicotine+: Preferencias -> Plugins -> desmarca DJAssist Grabber y
+     vuelve a marcarlo. (O simplemente cierra y abre Nicotine+.)
+  4. Recarga la pagina en el navegador.
+
+Tus colas NO se pierden al actualizar, y el OCR no hay que instalarlo de
+nuevo.
+
+
+16. DESINSTALAR
+---------------
+  1. En Nicotine+: Preferencias -> Plugins -> desmarca DJAssist Grabber.
+  2. Borra estas carpetas (las que existan):
+
+     Windows (tecla Windows + R, pega cada ruta y Enter para abrirla):
+       %APPDATA%\nicotine\plugins\djassist_grabber      (el programa)
+       %LOCALAPPDATA%\DJAssist Grabber                  (el OCR, ~1-2 GB)
+       Musica\DJAssist Grabber\Colas                    (tus colas)
+
+     Mac (en Finder: Cmd + Shift + G y pega cada ruta):
+       ~/.local/share/nicotine/plugins/djassist_grabber (el programa)
+       ~/.local/share/nicotine/djassist_grabber         (el OCR, ~1-2 GB)
+       ~/Music/DJAssist Grabber/Colas                   (tus colas)
+
+  Los temas que bajaste no se tocan. Nicotine+ y Python se desinstalan
+  como cualquier otro programa, si ya no los quieres.
+
+
+17. BUENA ONDA EN SOULSEEK (IMPORTANTE)
+---------------------------------------
+Soulseek funciona porque la gente comparte. No hay un servidor con la
+musica: cada tema que bajas te lo esta mandando otra persona desde su
+propio computador.
+
+  - Comparte algo. Mucha gente bloquea o pone al final de la fila a
+    quienes bajan sin compartir nada. Si compartes, vas a bajar mas
+    rapido y con menos rechazos.
+    Nicotine+ -> Preferencias -> "Compartidos" ("Shares") -> agrega una
+    carpeta con musica.
+  - No te desesperes. Si alguien tiene una fila larga, espera o elige
+    a otra persona. No le mandes mensajes apurandolo.
+  - No bajes discografias completas de una misma persona de golpe.
+  - Si un tema lo encuentras en Bandcamp y te gusta mucho, compralo: asi
+    apoyas al artista para que siga sacando musica.
+
+Disfruta y buenos sets!
