@@ -12,7 +12,7 @@ bajar de cada track — nada se descarga solo.
 
 **No hace falta usar la Terminal.**
 
-1. Descargá este proyecto (botón verde "Code" → "Download ZIP" en GitHub) y
+1. Descargá este proyecto (desde releases en la columna de la derecha de la pagina) y
    descomprimilo
 2. Hacé doble click en:
    - **Mac**: `Instalar.command`
