@@ -4,7 +4,7 @@ Plugin de [Nicotine+](https://nicotine-plus.org) con una interfaz web para
 buscar y descargar los tracks de una playlist desde Soulseek. Vos elegís qué
 bajar de cada track — nada se descarga solo.
 
-> ###
+> ### 📖 [Ver el tutorial visual, paso a paso](https://darvosis.github.io/GrabList_releases/)
 > La forma más fácil de arrancar si no sos técnico: instalación y primeros
 > pasos, con capturas, sin salir del navegador.
 >
