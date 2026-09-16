@@ -4,9 +4,13 @@ Plugin de [Nicotine+](https://nicotine-plus.org) con una interfaz web para
 buscar y descargar los tracks de una playlist desde Soulseek. Vos elegís qué
 bajar de cada track — nada se descarga solo.
 
-> **¿No sos técnico?** Abrí **[LEEME.txt](LEEME.txt)**: guía completa, paso a
-> paso, de instalación y uso (también queda una copia en
-> `Música/DJAssist Grabber/` después de instalar).
+> ### 📖 [Ver el tutorial visual, paso a paso](https://juanolivaresgonzalez.github.io/djassist-grabber-releases/)
+> La forma más fácil de arrancar si no sos técnico: instalación y primeros
+> pasos, con capturas, sin salir del navegador.
+>
+> ¿Preferís texto? Abrí **[LEEME.txt](LEEME.txt)**: la misma guía completa,
+> paso a paso (también queda una copia en `Música/DJAssist Grabber/`
+> después de instalar).
 
 ## Instalación
 
