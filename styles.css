@@ -301,7 +301,9 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outlin
 /* Windows desktop + installation */
 .desktop-demo, .settings-window, .terminal-demo, .nicotine-full-demo, .app-shell-demo,
 .dropzone-demo, .editor-demo, .playlist-created-demo, .search-ready-demo, .tabs-demo,
-.download-choice-demo, .progress-demo, .file-result-demo, .player-settings-demo, .play-all-demo {
+.download-choice-demo, .progress-demo, .file-result-demo, .player-settings-demo, .play-all-demo,
+.ocr-intro-demo, .image-quality-demo, .ocr-upload-demo, .ocr-install-demo,
+.ocr-processing-demo, .ocr-editor-demo {
   position: relative; z-index: 3; width: 100%; border: 1px solid #30404b; background: #111920; box-shadow: 0 28px 65px rgb(0 0 0 / 38%); opacity: 0; transform: perspective(1000px) rotateY(-3deg) translateY(20px);
 }
 .visual-right.active > :nth-child(2):not(.scene-caption),
@@ -417,6 +419,73 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outlin
 .progress-demo { padding: 30px; }.progress-track-info { display: grid; grid-template-columns: 38px 1fr 60px; align-items: center; }.progress-track-info > span { color: var(--muted); font: 9px var(--mono); }.progress-track-info p { margin: 0; }.progress-track-info b, .progress-track-info small { display: block; }.progress-track-info b { color: var(--strong); font: 600 13px var(--display); }.progress-track-info small { margin-top: 4px; color: var(--soft); font-size: 10px; }.progress-track-info strong { justify-self: end; color: var(--accent); font: 500 19px var(--mono); }.download-progress { height: 7px; margin: 28px 0 12px; background: #26333c; overflow: hidden; }.download-progress i { display: block; width: 68%; height: 100%; background: var(--accent); box-shadow: 0 0 12px var(--accent); animation: download-fill 4.5s ease-in-out infinite alternate; }.transfer-details { display: flex; gap: 16px; color: var(--muted); font: 8px var(--mono); }.transfer-details b { margin-left: auto; color: var(--accent); font: 8px var(--display); }.state-transform { display: flex; justify-content: center; align-items: center; gap: 16px; margin-top: 42px; padding: 17px; border: 1px solid var(--line); background: #0c1217; font: 8px var(--display); }.state-transform span { color: var(--accent); }.state-transform i { color: #56646e; font-style: normal; }.state-transform b { color: var(--ok); }
 .file-result-demo { padding-bottom: 18px; }.downloaded-row { display: grid; grid-template-columns: 35px 1fr 110px 85px; align-items: center; min-height: 78px; padding: 0 16px; border-bottom: 1px solid #28523f; background: rgb(88 211 154 / 5%); }.downloaded-row > span { color: var(--muted); font: 8px var(--mono); }.downloaded-row p { margin: 0; }.downloaded-row p b, .downloaded-row p small { display: block; }.downloaded-row p b { font: 600 10px var(--display); }.downloaded-row p small { margin-top: 3px; color: var(--soft); font-size: 9px; }.downloaded-row > i { color: var(--muted); font: normal 8px var(--mono); }.downloaded-row > strong { color: var(--ok); font: 600 7px var(--display); }.file-actions { display: flex; gap: 8px; padding: 17px; }.file-actions button { padding: 9px 11px; border: 1px solid #354650; background: transparent; color: var(--soft); font: 7px var(--display); }.file-actions .primary-file { border-color: #2f6971; color: var(--accent); }.explorer-result { display: flex; align-items: center; gap: 13px; margin: 0 17px; padding: 14px; border: 1px solid #3e5260; background: #17232c; }.music-file { display: grid; place-items: center; width: 38px; height: 43px; background: #2e6180; color: white; font-size: 18px; }.explorer-result p { margin: 0; }.explorer-result b, .explorer-result small { display: block; }.explorer-result b { color: var(--text); font-size: 9px; }.explorer-result small { margin-top: 4px; color: var(--muted); font: 7.5px var(--mono); }
 
+/* OCR */
+.ocr-route { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.ocr-route span, .ocr-route b { padding: 8px 10px; border: 1px solid var(--line); color: var(--muted); font: 8px var(--display); }
+.ocr-route b { border-color: #2d6870; color: var(--accent); }
+.ocr-route i { color: #53616c; font-style: normal; }
+.ocr-intro-demo { display: grid; grid-template-columns: 1fr 42px 1fr; align-items: center; gap: 10px; min-height: 360px; padding: 25px; }
+.ocr-scan-card, .ocr-text-card { position: relative; overflow: hidden; min-height: 280px; border: 1px solid #334650; background: #0c1217; }
+.capture-chrome { display: flex; align-items: center; gap: 6px; height: 38px; padding: 0 11px; border-bottom: 1px solid var(--line); background: #19222a; }
+.capture-chrome i { width: 7px; height: 7px; border-radius: 50%; background: #55636d; }
+.capture-chrome span { overflow: hidden; margin-left: 6px; color: var(--muted); font: 7px var(--mono); white-space: nowrap; text-overflow: ellipsis; }
+.capture-list { display: grid; gap: 4px; padding: 23px 15px; background: linear-gradient(135deg, #18242c, #10171d); }
+.capture-list span { padding: 12px 9px; background: rgb(255 255 255 / 4%); color: #d8e0e4; font-size: 8px; white-space: nowrap; }
+.capture-list b { margin-right: 8px; color: #647680; font: 7px var(--mono); }
+.scan-line { position: absolute; left: 0; right: 0; top: 40px; height: 2px; background: var(--accent); box-shadow: 0 0 15px var(--accent); animation: ocr-scan 3.2s ease-in-out infinite; }
+.ocr-conversion-arrow { color: var(--accent); font: 22px var(--display); text-align: center; }
+.ocr-text-card { display: flex; flex-direction: column; padding: 23px 18px; }
+.ocr-text-card small { color: var(--accent); font: 7px var(--display); letter-spacing: .13em; }
+.ocr-text-card code { flex: 1; margin-top: 22px; color: var(--soft); font: 8px/2.25 var(--mono); }
+.ocr-text-card > span { align-self: flex-start; padding: 6px 8px; border: 1px solid #285a45; color: var(--ok); font: 7px var(--display); }
+.image-quality-demo { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; min-height: 360px; padding: 19px; }
+.quality-shot { position: relative; overflow: hidden; min-width: 0; padding: 52px 14px 16px; border: 1px solid var(--line); background: #0c1217; }
+.quality-badge { position: absolute; left: 0; right: 0; top: 0; padding: 12px 14px; font: 7px var(--display); letter-spacing: .08em; }
+.good-shot { border-color: #2b5b48; }.good-shot .quality-badge { background: #11261d; color: var(--ok); }
+.noisy-shot { border-color: #5f4930; }.noisy-shot .quality-badge { background: #281f13; color: var(--warn); }
+.shot-list { display: grid; gap: 7px; padding: 17px 11px; background: #152129; }
+.shot-list b { overflow: hidden; padding: 8px; background: rgb(255 255 255 / 4%); color: #d8e0e4; font: 7px var(--body); white-space: nowrap; text-overflow: ellipsis; }
+.quality-shot > small { display: block; margin-top: 17px; color: var(--muted); font: 6.5px var(--display); text-align: center; }
+.noise-blocks { display: grid; gap: 8px; padding: 12px; filter: blur(.8px); transform: rotate(-1.5deg); background: repeating-linear-gradient(45deg, #182128, #182128 9px, #202a31 9px, #202a31 18px); }
+.noise-blocks i { height: 19px; background: #4a586144; }.noise-blocks i:nth-child(2) { width: 63%; }.noise-blocks i:nth-child(5) { width: 78%; }
+.noise-blocks b { padding: 9px 5px; color: #aeb5b9; font: 7px var(--body); white-space: nowrap; }
+.ocr-upload-demo { min-height: 380px; }
+.multi-dropzone { display: flex; align-items: center; justify-content: center; gap: 17px; margin: 16px 18px 12px; padding: 17px; border: 1px dashed #3b6670; background: rgb(60 198 207 / 3%); }
+.multi-dropzone .upload-symbol { flex: 0 0 auto; margin: 0; }
+.multi-dropzone p { margin: 0; }.multi-dropzone b, .multi-dropzone small { display: block; }
+.multi-dropzone b { color: var(--text); font: 600 10px var(--display); }.multi-dropzone small { margin-top: 4px; color: var(--muted); font-size: 8px; }
+.image-queue { padding: 0 18px 13px; }
+.image-queue > div, .processing-file { display: grid; grid-template-columns: 25px 38px 1fr 45px; align-items: center; gap: 10px; min-height: 57px; border-bottom: 1px solid var(--line-soft); }
+.image-queue > div > span { color: var(--muted); font: 7px var(--mono); }
+.image-thumb { display: block; width: 34px; height: 39px; border: 1px solid #3a515e; background-color: #1a2730; background-image: repeating-linear-gradient(0deg, transparent 0 6px, #71818a55 6px 8px); }
+.thumb-two { background-position: 0 3px; filter: brightness(.9); }.thumb-three { background-position: 0 6px; filter: brightness(.8); }
+.image-queue p, .processing-file p { min-width: 0; margin: 0; }.image-queue b, .image-queue small, .processing-file b, .processing-file small { display: block; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.image-queue b, .processing-file b { color: var(--text); font: 600 8px var(--display); }.image-queue small, .processing-file small { margin-top: 3px; color: var(--muted); font-size: 7px; }
+.image-queue em { justify-self: end; color: var(--accent); font: normal 6.5px var(--display); }
+.ocr-install-demo { min-height: 365px; padding: 23px; text-align: center; }
+.ocr-install-head { display: flex; align-items: center; gap: 11px; padding-bottom: 17px; border-bottom: 1px solid var(--line); text-align: left; }
+.ocr-install-head > span { display: grid; place-items: center; width: 42px; height: 42px; border: 1px solid #2d6870; color: var(--accent); font: 700 9px var(--display); }
+.ocr-install-head p { margin: 0; }.ocr-install-head b, .ocr-install-head small { display: block; }.ocr-install-head b { font: 600 10px var(--display); }.ocr-install-head small { margin-top: 4px; color: var(--muted); font-size: 8px; }
+.ocr-download-size { display: flex; align-items: center; justify-content: center; gap: 9px; margin: 23px 0 17px; }
+.ocr-download-size strong { color: var(--strong); font: 600 46px/1 var(--display); }.ocr-download-size > span { color: var(--accent); font: 600 14px var(--display); text-align: left; }.ocr-download-size small { display: block; margin-top: 4px; color: var(--muted); font: 6px var(--display); }
+.ocr-install-progress { display: grid; grid-template-columns: 1fr auto; gap: 7px; align-items: center; text-align: left; }
+.ocr-install-progress > i { grid-column: 1 / -1; height: 5px; background: #27343c; }.ocr-install-progress > i b { display: block; width: 68%; height: 100%; background: var(--accent); animation: ocr-install 4s ease-in-out infinite alternate; }
+.ocr-install-progress span, .ocr-install-progress em { color: var(--muted); font: normal 7px var(--mono); }.ocr-install-progress em { color: var(--accent); }
+.ocr-install-demo > button { margin-top: 18px; padding: 10px 15px; border: 0; background: var(--accent); color: #071013; font: 600 8px var(--display); }
+.install-reminder { display: flex; align-items: center; justify-content: center; gap: 7px; margin-top: 17px; color: var(--muted); font: 7px var(--display); }.install-reminder i { width: 6px; height: 6px; border-radius: 50%; background: var(--ok); box-shadow: 0 0 7px var(--ok); }
+.ocr-processing-demo { min-height: 370px; padding: 21px; }
+.processing-head { display: flex; align-items: center; justify-content: space-between; padding-bottom: 17px; border-bottom: 1px solid var(--line); }.processing-head p { margin: 0; }.processing-head b, .processing-head small { display: block; }.processing-head b { font: 600 11px var(--display); }.processing-head small { margin-top: 4px; color: var(--muted); font-size: 8px; }.processing-head span { color: var(--accent); font: 9px var(--mono); }
+.processing-file { grid-template-columns: 38px 1fr 34px; min-height: 67px; padding: 0 8px; }.processing-file.active { background: rgb(88 211 154 / 4%); }.processing-file > em { justify-self: center; color: var(--ok); font: normal 10px var(--display); }.processing-file.scanning { background: rgb(60 198 207 / 5%); }.processing-file.scanning > em { width: 15px; height: 15px; border: 1px solid var(--accent); border-top-color: transparent; border-radius: 50%; animation: radar 1s linear infinite; }
+.processing-meter { margin-top: 19px; }.processing-meter > i { display: block; height: 4px; background: #27343c; }.processing-meter > i b { display: block; width: 55%; height: 100%; background: var(--accent); animation: search-progress 4s ease-in-out infinite alternate; }.processing-meter span { display: block; margin-top: 9px; color: var(--muted); font: 7px var(--display); text-align: center; }
+.ocr-editor-demo { padding: 18px; }
+.ocr-editor-demo > label { display: block; margin: 0 0 6px; color: var(--muted); font: 7px var(--display); letter-spacing: .09em; }
+.ocr-editor-demo .name-field { height: 34px; margin-bottom: 13px; padding: 9px 11px; }
+.ocr-text-editor { border: 1px solid #344650; background: #0a1015; }
+.ocr-text-editor > span { position: relative; display: block; height: 38px; padding: 10px 67px 10px 39px; border-bottom: 1px solid #182129; color: var(--soft); font: 8px var(--mono); }
+.ocr-text-editor > span > i { position: absolute; left: 11px; color: #4e5c66; font-style: normal; }.ocr-text-editor > span > b { position: absolute; right: 9px; padding: 2px 5px; font: 7px var(--display); }
+.ocr-warning { background: rgb(242 181 68 / 6%); }.ocr-warning > b { color: var(--warn); }.ocr-delete { background: rgb(224 101 101 / 6%); color: #9d7777 !important; }.ocr-delete > b { color: #e57979; }
+.ocr-checklist { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; margin-top: 21px; }.ocr-checklist span { padding: 9px; border: 1px solid var(--line); color: var(--muted); font-size: 8px; }.ocr-checklist i { display: inline-block; min-width: 33px; margin-right: 5px; color: var(--warn); font: normal 7px var(--mono); }
+
 /* Player + finish */
 .path-trail.stacked { max-width: 340px; }
 .player-settings-demo { padding: 0 22px 22px; }.player-settings-head { display: flex; align-items: center; gap: 11px; margin: 0 -22px 23px; padding: 14px 20px; border-bottom: 1px solid var(--line); background: #182129; }.player-settings-head .brand-mark { flex: 0 0 auto; }.player-settings-head p { margin: 0; }.player-settings-head b, .player-settings-head small { display: block; }.player-settings-head b { font: 600 10px var(--display); }.player-settings-head small { margin-top: 3px; color: var(--muted); font-size: 8px; }.player-path { display: flex; height: 42px; border: 1px solid #344650; background: #0b1116; }.player-path span { flex: 1; overflow: hidden; padding: 12px; color: var(--soft); font: 8px var(--mono); white-space: nowrap; text-overflow: ellipsis; }.player-path button { width: 80px; border: 0; border-left: 1px solid #344650; background: #1a252c; color: var(--accent); font: 7px var(--display); }.player-options { display: flex; align-items: center; gap: 12px; margin-top: 16px; padding: 14px; border: 1px solid var(--line); background: #10171d; }.player-icon { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 6px; background: #ea7a22; color: white; }.player-options p { margin: 0; }.player-options b, .player-options small { display: block; }.player-options b { font: 600 10px var(--display); }.player-options small { margin-top: 4px; color: var(--muted); font-size: 8px; }.settings-save { min-height: 46px; margin-top: 18px; }
@@ -433,6 +502,8 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outlin
 @keyframes search-progress { to { width: 78%; } }
 @keyframes download-fill { from { width: 20%; } to { width: 100%; } }
 @keyframes finish-ring { 0% { opacity: 0; transform: scale(.55); } 35% { opacity: .65; } 100% { opacity: 0; transform: scale(1.35); } }
+@keyframes ocr-scan { 0%, 100% { transform: translateY(0); opacity: .35; } 50% { transform: translateY(235px); opacity: 1; } }
+@keyframes ocr-install { from { width: 35%; } to { width: 92%; } }
 
 @media (max-width: 1220px) {
   .guide-scene { grid-template-columns: minmax(300px, .72fr) minmax(450px, 1.28fr); gap: 4%; padding-left: 4%; padding-right: 4%; }
@@ -454,7 +525,9 @@ button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outlin
   .callout, .mini-steps, .key-hint, .success-line { margin-top: 15px; }
   .desktop-demo, .settings-window, .terminal-demo, .nicotine-full-demo, .app-shell-demo,
   .dropzone-demo, .editor-demo, .playlist-created-demo, .search-ready-demo, .tabs-demo,
-  .download-choice-demo, .progress-demo, .file-result-demo, .player-settings-demo, .play-all-demo { max-height: 390px; }
+  .download-choice-demo, .progress-demo, .file-result-demo, .player-settings-demo, .play-all-demo,
+  .ocr-intro-demo, .image-quality-demo, .ocr-upload-demo, .ocr-install-demo,
+  .ocr-processing-demo, .ocr-editor-demo { max-height: 390px; }
   .file-area, .explorer-list { height: 285px; min-height: 0; }
   .settings-content { min-height: 300px; }
   .nicotine-full-demo { min-height: 350px; }

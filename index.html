@@ -54,12 +54,16 @@
           <span class="chapter-number">08</span>
           <span><b>Reproducir</b><small>Configurar tu player</small></span>
         </button>
+        <button class="chapter" type="button" data-chapter="9">
+          <span class="chapter-number">09</span>
+          <span><b>Playlist con OCR</b><small>Leer varias imágenes</small></span>
+        </button>
       </nav>
 
       <div class="rail-footer">
         <span class="connection-dot"></span>
         <span>WINDOWS</span>
-        <b id="rail-progress">CAPÍTULO 1 DE 8</b>
+        <b id="rail-progress">CAPÍTULO 1 DE 9</b>
       </div>
     </aside>
 
@@ -592,13 +596,112 @@ Presiona una tecla para cerrar...</pre>
 
         <article class="scene finish-scene" data-chapter="8" data-scene="2" aria-hidden="true">
           <div class="finish-halo" aria-hidden="true"><i></i><i></i><i></i><span>✓</span></div>
-          <span class="scene-kicker"><i></i> RECORRIDO COMPLETO</span>
+          <span class="scene-kicker"><i></i> PRIMER RECORRIDO COMPLETO</span>
           <h2>Tu primera playlist<br><em>está lista.</em></h2>
           <p>Ya sabes instalar DJAssist, buscar en Soulseek, elegir archivos y reproducir el resultado.</p>
           <div class="finish-summary"><span><i>01</i> NICOTINE+ ABIERTO</span><span><i>02</i> PLAYLIST DESCARGADA</span><span><i>03</i> PLAYER CONFIGURADO</span></div>
           <div class="finish-folder"><span>♫</span><p><b>Set del sábado</b><small>Lista para escuchar o arrastrar a Rekordbox</small></p><button type="button" tabindex="-1">ABRIR CARPETA</button></div>
           <div class="community-note"><span>⇄</span><p><b>Recuerda compartir.</b><small>Soulseek funciona porque cada persona aporta música a la red.</small></p></div>
-          <div class="scene-caption"><span>03</span> Disfruta y buenos sets.</div>
+          <div class="scene-caption"><span>03</span> A continuación: crea otra playlist a partir de imágenes.</div>
+        </article>
+
+        <!-- Capítulo 9 · Playlist desde imágenes (OCR) -->
+        <article class="scene guide-scene visual-right" data-chapter="9" data-scene="0" aria-hidden="true">
+          <div class="guide-copy">
+            <span class="scene-kicker"><i></i> OCR · QUÉ HACE</span>
+            <h2>De imagen<br>a playlist.</h2>
+            <p>DJAssist puede leer una captura de Rekordbox, Beatport, Instagram u otra lista y convertirla en texto editable.</p>
+            <div class="ocr-route" aria-label="Imagen, lectura automática y texto editable"><span>IMAGEN</span><i>→</i><span>OCR</span><i>→</i><b>TEXTO EDITABLE</b></div>
+          </div>
+          <div class="ocr-intro-demo" aria-hidden="true">
+            <div class="ocr-scan-card">
+              <div class="capture-chrome"><i></i><i></i><i></i><span>playlist_house.png</span></div>
+              <div class="capture-list"><span><b>01</b>Kideko — The Message</span><span><b>02</b>Laurence Guy — U GO</span><span><b>03</b>Paluma — Rapture</span><span><b>04</b>Joshwa — Mercy</span></div>
+              <div class="scan-line"></div>
+            </div>
+            <div class="ocr-conversion-arrow">→</div>
+            <div class="ocr-text-card"><small>TEXTO DETECTADO</small><code>Kideko - The Message<br>Laurence Guy - U GO<br>Paluma - Rapture<br>Joshwa - Mercy</code><span>4 TEMAS</span></div>
+          </div>
+          <div class="scene-caption"><span>01</span> OCR significa reconocimiento óptico de caracteres.</div>
+        </article>
+
+        <article class="scene guide-scene visual-left" data-chapter="9" data-scene="1" aria-hidden="true">
+          <div class="image-quality-demo" aria-hidden="true">
+            <div class="quality-shot good-shot"><span class="quality-badge">✓ RECOMENDADA</span><div class="shot-list"><b>01&nbsp; Kideko — The Message</b><b>02&nbsp; Laurence Guy — U GO</b><b>03&nbsp; Paluma — Rapture</b><b>04&nbsp; Joshwa — Mercy</b></div><small>NÍTIDA · GRANDE · SOLO LA LISTA</small></div>
+            <div class="quality-shot noisy-shot"><span class="quality-badge">× EVITA ESTO</span><div class="noise-blocks"><i></i><i></i><i></i><b>1&nbsp; Kldeko - The Messag?</b><i></i><i></i></div><small>PEQUEÑA · BORROSA · CON RUIDO</small></div>
+          </div>
+          <div class="guide-copy">
+            <span class="scene-kicker"><i></i> OCR · PREPARAR</span>
+            <h2>La calidad<br>sí importa.</h2>
+            <p>Captura solo la lista, con el texto grande y nítido. Haz zoom antes de capturar y deja fuera botones, portadas y elementos innecesarios.</p>
+            <div class="callout"><span>◎</span><p><b>Menos ruido, mejores resultados.</b><small>Una imagen limpia reduce las correcciones posteriores.</small></p></div>
+          </div>
+          <div class="scene-caption"><span>02</span> El OCR funciona mejor cuando cada línea se lee con claridad.</div>
+        </article>
+
+        <article class="scene guide-scene visual-right" data-chapter="9" data-scene="2" aria-hidden="true">
+          <div class="guide-copy">
+            <span class="scene-kicker"><i></i> OCR · CARGAR</span>
+            <h2>Selecciona<br>todas juntas.</h2>
+            <p>Si la lista ocupa varias capturas, selecciónalas o arrástralas <b>todas de una vez</b>. DJAssist respetará el orden elegido.</p>
+            <div class="key-hint"><kbd>3</kbd><span>El nombre sugerido saldrá de la primera imagen.</span></div>
+          </div>
+          <div class="ocr-upload-demo">
+            <div class="dropzone-head"><span>NUEVA PLAYLIST</span><small>IMÁGENES · OCR</small></div>
+            <div class="multi-dropzone"><span class="upload-symbol">↑</span><p><b>Arrastra tus capturas aquí</b><small>Selecciona todas las imágenes al mismo tiempo</small></p></div>
+            <div class="image-queue"><div><span>01</span><i class="image-thumb thumb-one"></i><p><b>playlist_01.png</b><small>1,8 MB</small></p><em>LISTA</em></div><div><span>02</span><i class="image-thumb thumb-two"></i><p><b>playlist_02.png</b><small>1,6 MB</small></p><em>LISTA</em></div><div><span>03</span><i class="image-thumb thumb-three"></i><p><b>playlist_03.png</b><small>1,7 MB</small></p><em>LISTA</em></div></div>
+          </div>
+          <div class="scene-caption"><span>03</span> Cargarlas por separado reemplazaría la selección anterior.</div>
+        </article>
+
+        <article class="scene guide-scene visual-left" data-chapter="9" data-scene="3" aria-hidden="true">
+          <div class="ocr-install-demo">
+            <div class="ocr-install-head"><span>OCR</span><p><b>Preparar lector de imágenes</b><small>Solo durante el primer uso</small></p></div>
+            <div class="ocr-download-size"><strong>1–2</strong><span>GB<small>DESCARGA ÚNICA</small></span></div>
+            <div class="ocr-install-progress"><i><b></b></i><span>Instalando lector…</span><em>68%</em></div>
+            <button type="button" tabindex="-1">INSTALAR OCR</button>
+            <div class="install-reminder"><i></i><span>NICOTINE+ DEBE SEGUIR ABIERTO</span></div>
+          </div>
+          <div class="guide-copy">
+            <span class="scene-kicker"><i></i> OCR · SOLO LA PRIMERA VEZ</span>
+            <h2>Instala<br>el lector.</h2>
+            <p>Si aparece el aviso, pulsa <b>Instalar OCR</b>. Es una descarga de 1–2 GB: usa una buena conexión y no cierres Nicotine+.</p>
+            <div class="callout success"><span>✓</span><p><b>Se instala una sola vez.</b><small>Cuando termina, DJAssist continúa automáticamente con tus imágenes.</small></p></div>
+          </div>
+          <div class="scene-caption"><span>04</span> En los usos siguientes esta pantalla no vuelve a aparecer.</div>
+        </article>
+
+        <article class="scene guide-scene visual-right" data-chapter="9" data-scene="4" aria-hidden="true">
+          <div class="guide-copy">
+            <span class="scene-kicker"><i></i> OCR · PROCESAR</span>
+            <h2>Ahora trabaja<br>en segundo plano.</h2>
+            <p>No necesitas pulsar nada. DJAssist lee cada captura por separado y junta el resultado en el mismo orden.</p>
+            <div class="format-example"><span>TIEMPO ORIENTATIVO</span><code>5–15 segundos por imagen</code></div>
+          </div>
+          <div class="ocr-processing-demo">
+            <div class="processing-head"><p><b>Leyendo tus capturas</b><small>No cierres esta página</small></p><span>02 / 03</span></div>
+            <div class="processing-file active"><i class="image-thumb thumb-one"></i><p><b>playlist_01.png</b><small>8 temas detectados</small></p><em>✓</em></div>
+            <div class="processing-file scanning"><i class="image-thumb thumb-two"></i><p><b>playlist_02.png</b><small>Analizando texto…</small></p><em></em></div>
+            <div class="processing-file"><i class="image-thumb thumb-three"></i><p><b>playlist_03.png</b><small>Esperando</small></p><em>03</em></div>
+            <div class="processing-meter"><i><b></b></i><span>Las líneas se unirán automáticamente</span></div>
+          </div>
+          <div class="scene-caption"><span>05</span> El OCR es automático después de cargar las imágenes.</div>
+        </article>
+
+        <article class="scene guide-scene visual-left" data-chapter="9" data-scene="5" aria-hidden="true">
+          <div class="ocr-editor-demo">
+            <label>NOMBRE DE LA PLAYLIST</label><div class="name-field">Playlist House — septiembre</div>
+            <label>RESULTADO DEL OCR · REVISA ANTES DE CREAR</label>
+            <div class="ocr-text-editor"><span><i>01</i>Kideko - The Message</span><span class="ocr-warning"><i>02</i>Laurence Guy - U G0<b>0 → O</b></span><span class="ocr-warning"><i>03</i>Paluma / Rapture<b>/ → -</b></span><span class="ocr-delete"><i>04</i>PLAY ALL&nbsp;&nbsp; FOLLOW&nbsp;&nbsp; SHARE<b>BORRAR</b></span><span><i>05</i>Joshwa - Mercy</span></div>
+            <div class="editor-foot"><span>4 TEMAS VÁLIDOS</span><button type="button" tabindex="-1">CREAR PLAYLIST</button></div>
+          </div>
+          <div class="guide-copy">
+            <span class="scene-kicker"><i></i> OCR · REVISAR</span>
+            <h2>Corrige antes<br>de crear.</h2>
+            <p>Busca letras confundidas, símbolos raros y líneas que no sean temas. Cada línea debe quedar como <b>Artista - Título</b>.</p>
+            <div class="ocr-checklist"><span><i>I / l</i> Letras parecidas</span><span><i>0 / O</i> Números por letras</span><span><i>/</i> Cambiar por guion</span><span><i>×</i> Borrar botones y títulos</span></div>
+          </div>
+          <div class="scene-caption"><span>06</span> Ponle un nombre claro y pulsa “Crear playlist”.</div>
         </article>
       </div>
 
