@@ -2,15 +2,14 @@
 
 const BASE_SCENE_DURATION = 8500;
 const chapters = [
-  { id: 1, name: "Bienvenida" },
-  { id: 2, name: "Instalación" },
-  { id: 3, name: "Nicotine+" },
-  { id: 4, name: "Activar el plugin" },
-  { id: 5, name: "Primera playlist" },
-  { id: 6, name: "Buscar" },
-  { id: 7, name: "Descargar" },
-  { id: 8, name: "Reproducir" },
-  { id: 9, name: "Playlist con OCR" },
+  { id: 1, name: "Instalación" },
+  { id: 2, name: "Nicotine+" },
+  { id: 3, name: "Activar el plugin" },
+  { id: 4, name: "Primera playlist" },
+  { id: 5, name: "Buscar" },
+  { id: 6, name: "Descargar" },
+  { id: 7, name: "Reproducir" },
+  { id: 8, name: "Playlist con OCR" },
 ];
 
 const allScenes = [...document.querySelectorAll(".scene")];
