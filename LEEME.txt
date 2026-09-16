@@ -1,11 +1,11 @@
 ===========================================================================
-                           DJASSIST GRABBER
+                                  GRABLIST
              Guia de instalacion y uso (sin cosas tecnicas)
 ===========================================================================
 
 Que es esto?
 ------------
-DJAssist Grabber te ayuda a bajar los temas de una playlist desde Soulseek
+GrabList te ayuda a bajar los temas de una playlist desde Soulseek
 (una red gigante donde la gente comparte musica) usando el programa
 Nicotine+.
 
@@ -19,7 +19,7 @@ internet y nadie mas la ve.
 
   +---------------------------------------------------------------------+
   |  IMPORTANTE: Nicotine+ tiene que estar ABIERTO todo el tiempo       |
-  |  mientras usas DJAssist Grabber.                                    |
+  |  mientras usas GrabList.                                    |
   |                                                                     |
   |  La pagina funciona "adentro" de Nicotine+: si lo cierras, la       |
   |  pagina deja de cargar, no se puede buscar y las descargas se       |
@@ -36,7 +36,7 @@ INDICE
     2. Instalar en Windows
     3. Instalar en Mac
     4. Primera vez en Nicotine+
-    5. Activar DJAssist Grabber
+    5. Activar GrabList
 
   PARTE 2 - COMO SE USA
     6. Abrir la pagina
@@ -63,7 +63,7 @@ PARTE 1 - INSTALACION
 -------------------
   - Un computador con Windows 10/11 o Mac.
   - Internet.
-  - La carpeta de DJAssist Grabber (te la pasa quien te recomendo esto,
+  - La carpeta de GrabList (te la pasa quien te recomendo esto,
     normalmente como un archivo .zip).
   - Unos 15 minutos la primera vez.
 
@@ -71,7 +71,7 @@ No necesitas saber programar ni usar la "terminal". Todo es con doble
 click.
 
 Durante la instalacion se van a instalar (si no los tienes):
-  - Python: un programa que DJAssist Grabber necesita para funcionar.
+  - Python: un programa que GrabList necesita para funcionar.
     No lo vas a usar directamente, solo tiene que estar instalado.
   - Nicotine+: el programa para conectarte a Soulseek.
 
@@ -190,18 +190,18 @@ Abre Nicotine+. La primera vez te hace unas preguntas:
 Cuando termines, arriba deberia decir que estas conectado.
 
 
-5. ACTIVAR DJASSIST GRABBER
----------------------------
+5. ACTIVAR GRABLIST
+-------------------
 Esto se hace UNA sola vez.
 
   1. En Nicotine+, abre el menu (el boton con tres rayitas, arriba a la
      derecha) -> "Preferencias" (o "Preferences" si esta en ingles).
   2. En la lista de la izquierda, entra a "Plugins".
   3. Asegurate de que "Activar plugins" ("Enable plugins") este prendido.
-  4. Busca "DJAssist Grabber" en la lista y marca su casilla.
+  4. Busca "GrabList" en la lista y marca su casilla.
   5. Cierra las preferencias.
 
-Listo. Desde ahora, cada vez que abras Nicotine+, DJAssist Grabber se
+Listo. Desde ahora, cada vez que abras Nicotine+, GrabList se
 enciende solo.
 
 
@@ -236,7 +236,7 @@ Como esta armada la pagina:
     si hay temas para revisar (amarillo), si esta buscando (celeste) o si
     ya esta completa (verde).
   - Arriba de esa lista, "+ Nueva playlist": para cargar una nueva.
-  - Junto al nombre "DJAssist Grabber", un boton con un "?": abre esta
+  - Junto al nombre "GrabList", un boton con un "?": abre esta
     misma guia adentro de la pagina, organizada por temas, para no tener
     que andar buscando este archivo.
   - A la derecha, la playlist que abriste. Junto al titulo esta cuantas
@@ -338,7 +338,7 @@ lista tan larga que no entra en una sola captura de Instagram):
 Dentro de una playlist ves una tabla con todos los temas y su estado.
 
 Antes de buscar: marca los temas que ya tienes (si usas Rekordbox)
-  DJAssist Grabber puede revisar tu coleccion de Rekordbox y marcar como
+  GrabList puede revisar tu coleccion de Rekordbox y marcar como
   "Ya lo tienes" los temas que ya tienes, para no bajarlos de nuevo.
   Se configura UNA sola vez:
     1. En Rekordbox: menu "Archivo" -> "Exportar coleccion en formato xml"
@@ -346,13 +346,13 @@ Antes de buscar: marca los temas que ya tienes (si usas Rekordbox)
        puede variar un poco segun la version). Guardalo en un lugar facil,
        por ejemplo:  Musica\DJAssist Grabber\rekordbox.xml
     2. En Nicotine+: menu -> Preferencias -> "Plugins" -> click en
-       "DJAssist Grabber" -> boton "Settings" -> en "Coleccion de Rekordbox
+       "GrabList" -> boton "Settings" -> en "Coleccion de Rekordbox
        exportada en XML" elige ese archivo.
   Abajo a la izquierda de la pagina vas a ver cuantos temas tiene tu
   coleccion y cuando la exportaste.
 
   Cuando agregues musica a Rekordbox, vuelve a exportar la coleccion al
-  MISMO archivo (reemplazandolo). DJAssist Grabber lo nota solo.
+  MISMO archivo (reemplazandolo). GrabList lo nota solo.
 
   Solo cuenta si tienes la MISMA version. Si tienes otra (por ejemplo
   pediste el Extended y tienes el Original), el tema se busca igual y
@@ -454,7 +454,7 @@ lo que ya bajaste.
   archivo. Si prefieres que se abra siempre con un programa en particular
   (VLC, Serato, tu reproductor de siempre):
     Nicotine+ -> menu -> Preferencias -> "Plugins" -> click en
-    "DJAssist Grabber" -> boton "Settings" (Ajustes) -> en "Programa para
+    "GrabList" -> boton "Settings" (Ajustes) -> en "Programa para
     abrir un tema ya bajado..." elige el programa (el .exe en Windows).
     Vacio = el de siempre.
 
@@ -573,7 +573,7 @@ Para compartir una playlist completa con un amigo:
   esas apps con la lista ya escrita.
 
   Ojo: esto comparte la LISTA de temas, no los archivos que ya bajaste.
-  Tu amigo necesita su propio DJAssist Grabber para buscarlos y bajarlos
+  Tu amigo necesita su propio GrabList para buscarlos y bajarlos
   con su propia cuenta de Soulseek.
 
 
@@ -624,7 +624,7 @@ Los temas que bajas:
 
   Si prefieres que las carpetas de las playlists se creen en otro lado:
     Nicotine+ -> menu -> Preferencias -> "Plugins" -> click en
-    "DJAssist Grabber" -> boton "Settings" (Ajustes) -> en "Carpeta donde
+    "GrabList" -> boton "Settings" (Ajustes) -> en "Carpeta donde
     se crea una carpeta por cada playlist" elige la carpeta que quieras.
     Si lo dejas vacio, se usa la carpeta de descargas de Nicotine+.
 
@@ -663,7 +663,7 @@ PARTE 3 - AYUDA
 "La pagina http://127.0.0.1:8765 no carga"
   - Esta abierto Nicotine+? Tiene que estarlo.
   - Esta activado el plugin? Revisa la seccion 5.
-  - Prueba desactivar y volver a activar DJAssist Grabber en
+  - Prueba desactivar y volver a activar GrabList en
     Preferencias -> Plugins, y recarga la pagina.
   - Si nada funciona, cierra Nicotine+ por completo y abrelo de nuevo.
 
@@ -682,7 +682,7 @@ PARTE 3 - AYUDA
   - Si instalaste Python sin marcar "Add python.exe to PATH", desinstalalo
     y vuelve a instalarlo marcando esa casilla.
 
-"No aparece DJAssist Grabber en la lista de Plugins"
+"No aparece GrabList en la lista de Plugins"
   - Vuelve a correr el instalador (seccion 2 o 3).
   - Cierra Nicotine+ por completo y abrelo de nuevo.
 
@@ -717,14 +717,14 @@ Como me entero de que hay una version nueva?
 Que version tengo?
   En la pagina, en la barra de abajo a la derecha, dice la version (por
   ejemplo "v1.0"). El .zip trae la version en el nombre
-  (por ejemplo "DJAssist-Grabber-v1.1.zip"). Si el numero del zip es mas
+  (por ejemplo "GrabList-v1.1.zip"). Si el numero del zip es mas
   alto que el de tu pagina, es una version nueva.
 
 Cuando haya una version nueva:
   1. Baja el .zip nuevo (boton "Descargar" de la franja verde, o el que te
      pasen) y descomprimelo (puedes borrar la carpeta vieja).
   2. Doble click en "Instalar.bat" (Windows) o "Instalar.command" (Mac).
-  3. En Nicotine+: Preferencias -> Plugins -> desmarca DJAssist Grabber y
+  3. En Nicotine+: Preferencias -> Plugins -> desmarca GrabList y
      vuelve a marcarlo. (O simplemente cierra y abre Nicotine+.)
   4. Recarga la pagina en el navegador.
 
@@ -734,7 +734,7 @@ instalarlo de nuevo.
 
 16. DESINSTALAR
 ---------------
-  1. En Nicotine+: Preferencias -> Plugins -> desmarca DJAssist Grabber.
+  1. En Nicotine+: Preferencias -> Plugins -> desmarca GrabList.
   2. Borra estas carpetas (las que existan):
 
      Windows (tecla Windows + R, pega cada ruta y Enter para abrirla):

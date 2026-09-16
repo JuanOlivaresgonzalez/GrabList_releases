@@ -1,4 +1,4 @@
-# DJAssist Grabber
+# GrabList
 
 Plugin de [Nicotine+](https://nicotine-plus.org) con una interfaz web para
 buscar y descargar los tracks de una playlist desde Soulseek. Vos elegís qué
@@ -23,7 +23,7 @@ bajar de cada track — nada se descarga solo.
    - **Windows**: `Instalar.bat`
 3. Seguí las instrucciones en pantalla (si no tenés Python o Nicotine+
    instalados, el instalador te lleva a la página oficial para bajarlos)
-4. Abrí Nicotine+ → Preferencias → Plugins → activá **DJAssist Grabber**
+4. Abrí Nicotine+ → Preferencias → Plugins → activá **GrabList**
 5. Abrí [http://127.0.0.1:8765](http://127.0.0.1:8765) en el navegador
 
 Requiere Python 3 instalado en tu compu (el instalador te avisa y te manda a
